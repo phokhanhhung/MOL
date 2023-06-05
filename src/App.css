@@ -1,0 +1,10 @@
+.app {
+  text-align: center;
+  width: 100%;
+  transition: all .5s ease;
+
+  /* background: linear-gradient(to right bottom, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  transition: all .5s ease-out; */
+}

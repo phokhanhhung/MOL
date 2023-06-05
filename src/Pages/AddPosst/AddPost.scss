@@ -1,0 +1,143 @@
+@import '../../styles/layout.scss';
+
+// .add-post {
+  // background-color: rgba(0, 0, 0, 0.5);
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: 2000;
+  // width: 100%;
+  // height: 540px;
+  // padding: 50px 0;
+  // margin-bottom: 50px;
+
+  .add-post__form {
+    max-width: 1196px;
+    height: 100%;
+    margin: 50px auto;
+    // background-color: #fff;
+
+    &-logo {
+      width: 100%;
+      margin-bottom: 50px;
+      @include flex-row(center, space-between);
+      
+      &-wrapper {
+        width: 40%;
+        @include flex-row(center, space-between);
+
+        > img {
+          width: 40%;       
+          margin: 0 10%; 
+        }
+      }
+      
+    }
+
+    &-content {
+      @include flex-row(flex-start, space-between);
+
+      .add-post__form-image {
+        text-align: center;
+        width: 40%;
+
+        &-wrapper {
+          max-width: 330px;
+          max-height: 330px;
+          height: 330px;
+          margin: 0 auto;
+          // background-color: #073B6B;
+
+          > img {
+
+          }
+        }
+
+        > input {
+
+        }
+      }
+
+      .add-post__form-fields {
+        width: 60%;
+
+        > .add-post__form-field {
+          text-align: left;
+          margin-bottom: 10px;
+          > p {
+            margin-bottom: 8px;
+          }
+    
+          > input, select {
+            height: 40px;
+          }
+
+          > textarea {
+            height: 152px;
+          }
+
+          > textarea::-webkit-scrollbar {
+            width: 10px;
+          }
+
+          > textarea::-webkit-scrollbar-thumb {
+            background-color: #C6C6C6; 
+            border-radius: 10px;
+          }
+
+          > textarea::-webkit-scrollbar-thumb:hover {
+            background-color: #9E9B9B;
+          }
+
+          > input,
+          textarea,
+          select {
+            width: 100%;
+            border-radius: 10px;
+            padding: 0 10px;
+            outline: none;
+            border: 1px solid #D9D9D9;
+          }
+        }
+    
+        > .add-post__form-genders {
+          @include flex-row(center, space-between);
+    
+          > .add-post__form-field-gender {
+            @include flex-row(center, space-between);
+    
+            > label {
+              margin-left: 10px;
+            }
+          }
+        }
+
+        > .add-post__form-submit {
+          text-align: right;
+
+          > input {
+            height: 40px;
+            width: 200px;
+            border: 1px solid #2D4BB5;
+            border-radius: 10px;
+            background-color: transparent;
+            color: #2D4BB5;
+            margin-top: 20px;
+            font-size: 18px;
+            font-size: 16px;
+          }
+
+          > input:hover {
+            cursor: pointer;
+            background-color: #073B6B;
+            color: #fff;
+          }
+          
+        }
+      }
+
+    }
+    
+  }
+
+// }

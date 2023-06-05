@@ -1,0 +1,98 @@
+@import '../../styles/tranform.scss';
+
+.default {
+  width: 100%;
+
+  &__hero {
+    text-align: center;
+    width: 100%;
+    height: 650px;
+    background-image: url('../../Assets/images/default-page-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flow-root;
+
+    > .default__texts {
+      margin-top: 10%;
+
+      > p:first-child {
+        font-size: 48px;
+        letter-spacing: 10px;
+      }
+
+      > p:last-child {
+        font-size: 32px;
+      }
+
+      > p {
+        color: #fff;
+        width: fit-content;
+        margin: 0 auto;
+      }
+    }
+
+    > .default__buttons {
+      margin-top: 15%;
+
+      > button {
+        width: 250px;
+        height: 60px;
+        font-size: 30px;
+        border: none;
+        color: #fff;
+      }
+
+      > button:hover {
+        cursor: pointer;
+      }
+
+      > button:first-child {
+        border: #B5B2B2 solid 1px;
+        background-color: transparent;
+      }
+
+      > button:last-child {
+        background-color: rgba(181, 178, 178, 0.5);
+        margin-top: 20px;
+      }
+    }
+  }
+
+  > a {
+    text-decoration: none;
+    
+    > img {
+      object-fit: contain;
+      width: 300px;
+      margin: 63px 0;
+    }
+
+    > img:hover {
+      cursor: pointer;
+      animation-name: shaking;
+      animation-duration: 0.5s;
+      animation-iteration-count: 2;
+    }
+  }
+  
+
+  @keyframes shaking {
+    0% {
+      transform: rotate(0deg);
+    } 
+    40% {
+      transform: rotate(-3deg);
+    }
+    60% {
+      transform: rotate(3deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+
+  }
+
+}   
+
+

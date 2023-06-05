@@ -1,0 +1,231 @@
+@import '../../styles/layout.scss';
+
+.my-jrn {
+  max-width: 1196px;
+  margin: 0 auto;
+
+  > p {
+    font-size: 18px;
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  &__user-info {
+    @include flex-row(flex-start, space-between);
+
+    &-line {
+      width: 1px;
+      height: 300px;
+      background-color: #9E9B9B;
+      margin: 0 20px;
+    }
+
+    &-col-1 {
+      width: 30%;
+      text-align: left;
+
+      > img {
+        object-fit: contain;
+        width: 220px;
+        border-radius: 10px;
+      }
+
+      > p {
+        margin: 5px 0;
+      }
+
+      > p:last-child {
+        color: #2D4BB5;
+        width: fit-content;
+      }
+
+      > p:last-child:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-col-2 {
+      width: 50%;
+      text-align: left;
+
+      &-des {
+        margin-bottom: 20px;
+        > p {
+          height: 100px;
+          overflow-y: auto;
+        }
+        
+      }
+
+      h4 {
+        position: relative;
+        margin-bottom: 10px;
+        @include flex-row(center, unset);
+
+        > svg {
+          color: #2D4BB5;
+          margin-left: 8px;
+        }
+
+        > svg:hover {
+          cursor: pointer;
+          width: 18px;
+          height: 18px;
+          transition: all .5s ease;
+        }
+
+        div {
+          margin-left: 8px;
+          height: 18px;
+
+          > svg {
+            color: #2D4BB5;
+            
+          }
+  
+          > svg:hover {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            transition: all .5s ease;
+          }
+        }
+
+        > .my-jrn__user-info-key-list {
+          padding: 20px;
+          width: 400px;
+          height: 300px;
+          overflow-y: auto;
+          display: none;
+          flex-wrap: wrap;
+          background-color: rgba(225, 225, 225, 0.9);
+          border: 1px solid #9E9B9B;
+          border-radius: 10px;
+          position: absolute;
+          left: 22%;
+          bottom: -142px;
+          z-index: 1999;
+        
+          > p {
+            height: 40px;
+            width: fit-content;
+            line-height: 40px;
+            text-align: center;
+            padding: 0 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            background-color: #fff;
+            margin-right: 15px;
+            margin-bottom: 15px;
+          } 
+
+          > p:hover {
+            cursor: pointer;
+            border: 1px solid #2D4BB5;
+            
+          }
+        }
+
+        > .my-jrn__user-info-key-list::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        > .my-jrn__user-info-key-list::-webkit-scrollbar-thumb {
+          background-color: #C6C6C6; 
+          border-radius: 10px;
+        }
+
+        > .my-jrn__user-info-key-list::-webkit-scrollbar-thumb:hover {
+          background-color: #9E9B9B;
+        }
+        
+      }
+    }
+
+    &-col-3 {
+      width: 20%;
+      text-align: left;
+
+      &-mode {
+        margin-bottom: 20px;
+        height: 100px;
+
+        > p {
+          @include flex-row(center, unset);
+
+          > span {
+            > svg {
+              margin-right: 20px;
+              font-size: 30px;
+            }
+
+            > svg:hover {
+              cursor: pointer;
+            }
+          }
+          
+        }
+      }
+
+      &-out {
+        > button {
+          width: 100%;
+          height: 48px;
+          border: none;
+          border-radius: 5px;
+          color: #fff;
+          background-color: #DB0F0F;
+          font-size: 18px;
+        }
+
+        > button:hover {
+          cursor: pointer;
+        }
+      }
+
+      h4 {
+        margin-bottom: 10px;
+      }  
+    }
+  }
+  
+  &__texts {
+    @include flex-row(center, space-between);
+    margin: 40px 0 10px;
+    text-decoration: none;
+
+    > p {
+      width: calc(100%/3);
+      text-align: -webkit-right;
+      
+      > a {
+        @include flex-row(center, flex-end);
+        color: #2D4BB5;
+        text-decoration: none;
+        width: fit-content;
+
+        > svg {
+        width: 20px;
+        margin-right: 5px;
+        fill: #2D4BB5;
+      }
+      }
+
+      > a:last-child:hover {
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+    }
+
+    > h3 {
+      width: calc(100%/3);
+      text-align: center;
+    }
+
+    
+  }
+
+}

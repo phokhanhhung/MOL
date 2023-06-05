@@ -1,0 +1,140 @@
+@import '../../styles/layout.scss';
+
+.sign-up {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  > form {
+    width: 600px;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 0 auto;
+    background-color: #fff;
+
+    > img {
+      object-fit: contain;
+      width: 250px;
+    }
+
+    > .sign-up__field {
+      text-align: left;
+
+      > p {
+        margin: 8px 0;
+      }
+
+      > input {
+        height: 40px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 0 10px;
+        outline: none;
+        border: 1px solid #D9D9D9;
+      }
+
+      > input::placeholder {
+        color: red;
+        font-style: italic;
+      }
+    }
+
+    > .sign-up__genders {
+      @include flex-row(center, space-between);
+
+      > .sign-up__field-gender {
+        @include flex-row(center, space-between);
+
+        > label {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    > input {
+      height: 40px;
+      width: 100%;
+      border: none;
+      background-color: #073B6B;
+      color: #fff;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    > input:hover {
+      cursor: pointer;
+    }
+
+    > p {
+      margin: 20px 0 10px;
+    }
+
+    > .sign-up__orther-methods {
+      @include flex-row(center, center);
+
+      > img {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+      }
+    }
+
+    > i {
+      margin-top: 36px;
+
+      > b {
+        color: #0D1CA8;
+      }
+
+      > b:hover {
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  // Loading css
+  .lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+  
+}
